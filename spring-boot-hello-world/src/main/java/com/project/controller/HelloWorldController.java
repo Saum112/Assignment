@@ -23,7 +23,7 @@ public class HelloWorldController {
 		return map;
 	}
 
-	@PostMapping(produces = { "application/json" }, value = { "/hello" })
+	@PostMapping("/hello")
 	public Map<String, String> postHello(@RequestBody Map<String, String> data) {
 		HashMap<String, String> map = new HashMap<>();
 		String li = data.values().stream().toList().get(0);
